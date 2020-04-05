@@ -1,39 +1,54 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en" dir="ltr">
 
 <head>
   <meta charset="utf-8">
+  <meta name="description" content="Family Whiteboard">
+  <meta http-equiv="refresh" content="30">
+  <meta name="author" content="Ike Maldonado">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Whiteboard via text</title>
-  <!-- reference an external css style sheet -->
-  <link rel="stylesheet" href="styles.css">
-  <!--
-  <link rel="stylesheet" href="https://www.w3schools.com/html/styles.css">
-  to link to an external stylesheet  -->
 
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="javascript.js" charset="utf-8"></script>
 </head>
 
-<style>
-#textmessage {
-  background-color: lightblue;
-  color: black;
-  padding: 40px;
-  text-align: left;
-}
-</style>
-
-<body>
-<p><a href="url">link text</a></p>
-
-<p title="Use this chatroom to talk to family!">
-<label id="chatlabel" for="chatroom">Family Chat Room</label>
-</p>
-
-<form action="/action_page.php"> <!-- Add a reload funtion from here -->
-<textarea id="textmessage" name="textmessagedata" rows="20" cols="80" placeholder="Enter message here..." wrap="hard" autofocus></textarea>
-</form>
 
 
-<input type="submit" formaction="/action_page2.php" value="Submit"> <!-- Save, then call the reload function from here -->
+<body id="bodypage">
+
+  <h2>Family Chat Room</h2>
+  <form action="/action_page.php" onsubmit="submittedNotification()"novalidate id="chatform" target="_self" method="post"> <!-- Add a reload funtion from here -->
+    <label for="textmessage"></label>
+    <textarea id="textmessage" name="textmessage" onchange="submitButtonReactivate()" value="retrieveTextFunction()" rows="20" cols="80"
+    placeholder="Enter message here..." wrap="hard" required autofocus></textarea><br><br>
+    <input type="submit" onmouseover="" formtarget="_blank" value="Submit"> <!-- Save, then call the reload function from here -->
+  </form>
+
+
+
+
+
+  <h2>Media Queries</h2>
+  <p>Resize the browser window.</p>
+
+  <p>Make sure you reach the breakpoint at 800px when resizing this frame.</p>
+
+  <div class="left">
+    <p>Left Menu</p>
+  </div>
+
+  <div class="main">
+    <p>Main Content</p>
+  </div>
+
+  <div class="right">
+    <p>Right Content</p>
+  </div>
+
+
 
 </body>
 
