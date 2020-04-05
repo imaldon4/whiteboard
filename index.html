@@ -12,35 +12,29 @@
 
 </head>
 
+<style>
+#textmessage {
+  background-color: lightblue;
+  color: black;
+  padding: 40px;
+  text-align: left;
+}
+</style>
+
 <body>
-  <p title="I'm a tooltip">This is a paragraph.</p>
+<p><a href="url">link text</a></p>
 
-//  <p><a href="url">link text</a></p>
+<p title="Use this chatroom to talk to family!">
+<label id="chatlabel" for="chatroom">Family Chat Room</label>
+</p>
 
-  <pre>
-    My Bonnie lies over the ocean.
-
-    My Bonnie lies over the sea.
-
-    My Bonnie lies over the ocean.
-
-    Oh, bring back my Bonnie to me.
-  </pre>
-
-  <form action="/action_page.php">
-  <label for="fname">First name:</label>
-  <input type="text" id="fname" name="fname"><br><br>
-  <label for="lname">Last name:</label>
-  <input type="text" id="lname" name="lname"><br><br>
-  <input type="submit" value="Submit">
-
-
-<label for="w3mission">W3Schools' mission:</label>
-<textarea id="w3mission" rows="20" cols="80" placeholder="Enter message here..." wrap="hard" autofocus></textarea>
-
-
-
+<form action="/action_page.php"> <!-- Add a reload funtion from here -->
+<textarea id="textmessage" name="textmessagedata" rows="20" cols="80" placeholder="Enter message here..." wrap="hard" autofocus></textarea>
 </form>
+
+
+<input type="submit" formaction="/action_page2.php" value="Submit"> <!-- Save, then call the reload function from here -->
+
 </body>
 
 </html>
