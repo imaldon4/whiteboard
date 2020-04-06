@@ -22,7 +22,6 @@ $("#load").addEventListener('click', function() {
 
     // get the filename
     const filename = $('#fileonfile').value;
-
     // load
     loadFile(filename, function(err, data) {
         if (err) {
