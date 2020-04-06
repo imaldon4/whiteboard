@@ -5,7 +5,7 @@ $("#save").addEventListener('click', function() {
 
     // get the filename and data
     const filename = 'mytext.txt';
-    const data = $("#savedata").value;
+    const data = document.getElementById("savedata");
 
     // save
     saveFile(filename, data, function(err) {
