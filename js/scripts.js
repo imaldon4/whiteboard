@@ -5,7 +5,7 @@ $("#save").addEventListener('click', function() {
 
     // get the filename and data
     const filename = '/mytext.txt';
-    const data = document.getElementById("savedata");
+    const data = document.getElementById("loaddata");
 
     // save
     saveFile(filename, data, function(err) {
@@ -52,5 +52,5 @@ function doXhr(url, method, data, callback) {
           callback('Request failed.  Returned status of ' + xhr.status);
       }
   };
-  xhr.send(data.document);
+  xhr.send(data);
 }
