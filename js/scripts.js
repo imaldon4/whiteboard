@@ -16,3 +16,41 @@ $("#save").addEventListener('click', function() {
         }
     });
 });
+
+// when the user clicks load
+$("#load").addEventListener('click', function() {
+
+    // get the filename
+    const filename = 'mytext.txt';
+
+    // load
+    loadFile(filename, function(err, data) {
+        if (err) {
+            alert("failed to load: " + filename + "\n" + err);
+        } else {
+            $("#loaddata").value = data;
+            alert("loaded: " + filename);
+        }
+    });
+});
+
+function saveFile(filename, data, callback) {
+    doXhr(filename, 'PUT', data, callback);
+}
+
+function loadFile(filename, callback) {
+    doXhr(filename, 'GET', '', callback);
+}
+
+function doXhr(url, method, data, callback) {
+  const xhr = new XMLHttpRequest();
+  xhr.open(method, url);
+  xhr.onload = function() {
+      if (xhr.status === 200) {
+          callback(null, xhr.responseText);
+      }  else {
+          callback('Request failed.  Returned status of ' + xhr.status);
+      }
+  };
+  xhr.send(data);
+}
