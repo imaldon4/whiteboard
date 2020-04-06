@@ -35,7 +35,7 @@ $("#load").addEventListener('click', function() {
 });
 
 function saveFile(filename, data, callback) {
-    doXhr(filename, 'POST', data, callback);
+    doXhr(filename, 'PUT', data, callback);
 }
 
 function loadFile(filename, callback) {
