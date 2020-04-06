@@ -4,7 +4,7 @@ const $ = document.querySelector.bind(document);
 $("#save").addEventListener('click', function() {
 
     // get the filename and data
-    const filename = 'mytext.txt';
+    const filename = '/mytext.txt';
     const data = document.getElementById("savedata");
 
     // save
@@ -21,7 +21,7 @@ $("#save").addEventListener('click', function() {
 $("#load").addEventListener('click', function() {
 
     // get the filename
-    const filename = 'mytext.txt';
+    const filename = '/mytext.txt';
 
     // load
     loadFile(filename, function(err, data) {
