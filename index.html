@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <script type="text/javascript" src="./js/scripts.js"></script>
 
+<<<<<<< HEAD
 <html lang="en-US">
 
 <head>
@@ -8,14 +9,73 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
       <title>Today's Date</title>
 
+||||||| 21b0e90... Basic
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="Family Whiteboard">
+  <meta http-equiv="refresh" content="30">
+  <meta name="author" content="Ike Maldonado">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Whiteboard via text</title>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+  <h2>Family Chat Room</h2>
+  <textarea id="myTextArea" rows="20" cols="80"></textarea><br><br>
+  <button id="myBtn">Submit</button>
+
+
+
+  <script>
+  document.getElementById("myBtn").addEventListener("click", myFunction);
+
+  function myFunction() {
+    alert ("Hello World!");
+  }
+  </script>
+
+=======
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="Family Whiteboard">
+  <meta http-equiv="refresh" content="30">
+  <meta name="author" content="Ike Maldonado">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Whiteboard via text</title>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="javascript.js" charset="utf-8"></script>
+>>>>>>> parent of 21b0e90... Basic
 </head>
 
+<<<<<<< HEAD
 <body>
     <h2>JavaScript addEventListener()</h2>
     <p>This example uses the addEventListener() method to execute a function when a user clicks on a button.</p>
 <button id="myBtn">Try it</button>
 <script src="./js/scripts.js" charset="utf-8"></script>
 </body>
+||||||| 21b0e90... Basic
+<body id="bodypage">
 
+
+
+=======
+
+
+<body id="bodypage">
+>>>>>>> parent of 21b0e90... Basic
+
+  <h2>Family Chat Room</h2>
+  <form action="/action_page.php" onsubmit="submittedNotification()"novalidate id="chatform" target="_self" method="post"> <!-- Add a reload funtion from here -->
+    <label for="textmessage"></label>
+    <textarea id="textmessage" name="textmessage" onchange="submitButtonReactivate()" value="retrieveTextFunction()" rows="20" cols="80"
+    placeholder="Enter message here..." wrap="hard" required autofocus></textarea><br><br>
+    <input type="submit" onmouseover="" formtarget="_blank" value="Submit"> <!-- Save, then call the reload function from here -->
+  </form>
 
 </html>
