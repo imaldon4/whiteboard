@@ -34,7 +34,7 @@ $("#load").addEventListener('click', function() {
 });
 
 function saveFile(filename, data, callback) {
-    doXhr(filename, 'PUT', data, callback);
+    doXhr(filename, 'POST', data, callback);
 }
 
 function loadFile(filename, callback) {
@@ -43,7 +43,7 @@ function loadFile(filename, callback) {
 
 function doXhr(url, method, data, callback) {
   const xhr = new XMLHttpRequest();
-  xhr.open(method, url);
+  xhr.open(method, url, true, 'webpeople', 'webpeople');
   xhr.onload = function() {
       if (xhr.status === 200) {
           callback(null, xhr.responseText);
